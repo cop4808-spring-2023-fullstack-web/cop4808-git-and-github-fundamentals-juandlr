@@ -92,6 +92,26 @@ function inputOperator(operator) {
         //2nd click - handles first operator input
         firstOperator = operator;
         firstOperand = displayValue;
+        if (operator == 'sqrt') {
+            firstOperator = null;
+            displayValue = squareRoot(displayValue);
+            updateDisplay();
+        }
+        if (operator == 'log2') {
+            firstOperator = null;
+            displayValue = log2(displayValue);
+            updateDisplay();
+        }
+        if (operator == 'exp2') {
+            firstOperator = null;
+            displayValue = exp2(displayValue);
+            updateDisplay();
+        }
+        if (operator == 'pi') {
+            firstOperator = null;
+            displayValue = pi(displayValue);
+            updateDisplay();
+        }
     }
 }
 
@@ -181,4 +201,27 @@ function operate(x, y, op) {
 
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
+}}
+
+// SquareRoot function fixed to 9 decimal digits.
+function squareRoot(num) {
+    return displayValue = Math.sqrt(num);
 }
+
+// log base 2 function fixed to 9 decimal digits.
+function log2(num) {
+    return displayValue = Math.log2(num);
+}
+
+// Exponentiation function raised to 2, fixed to 9 decimal digits.
+function exp2(num) {
+    return displayValue = Math.pow(num, 2);
+}
+
+// Returns PI
+function pi(num) {
+    return Math.PI;
+}
+
+
+
