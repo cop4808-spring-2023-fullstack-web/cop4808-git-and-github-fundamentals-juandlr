@@ -97,7 +97,7 @@ function inputOperator(operator) {
             displayValue = squareRoot(displayValue);
             updateDisplay();
         }
-        if (operator == 'log2') {
+        if (operator == 'log') {
             firstOperator = null;
             displayValue = log2(displayValue);
             updateDisplay();
@@ -205,22 +205,22 @@ function roundAccurately(num, places) {
 
 // SquareRoot function fixed to 9 decimal digits.
 function squareRoot(num) {
-    return displayValue = Math.sqrt(num);
+    return displayValue = Math.sqrt(num).toString();
 }
 
 // log base 2 function fixed to 9 decimal digits.
 function log2(num) {
-    return displayValue = Math.log2(num);
+    return displayValue = Math.log2(num).toString();
 }
 
 // Exponentiation function raised to 2, fixed to 9 decimal digits.
 function exp2(num) {
-    return displayValue = Math.pow(num, 2);
+    return displayValue = Math.pow(num, 2).toString();
 }
 
 // Returns PI
 function pi(num) {
-    return Math.PI;
+    return Math.PI.toString();
 }
 
 
