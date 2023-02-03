@@ -201,7 +201,7 @@ function operate(x, y, op) {
 
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
-}}
+}
 
 // SquareRoot function fixed to 9 decimal digits.
 function squareRoot(num) {
