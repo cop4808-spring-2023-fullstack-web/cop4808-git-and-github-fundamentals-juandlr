@@ -108,3 +108,8 @@ button {
 .percent:active {
     background-color: rgb(123, 189, 255);
 }
+
+.new-row {
+    background-color: blueviolet;
+    font-weight: bold;
+}
