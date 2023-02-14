@@ -3,7 +3,7 @@ Juan Lopez
 - Square Root
 - Log Base 2
 - Exponent of 2
-Pi
+- Pi
 
 ![](https://raw.githubusercontent.com/cop4808-spring-2023-fullstack-web/cop4808-git-and-github-fundamentals-juandlr/main/calculator-upgrades.gif)
 
