@@ -4,6 +4,7 @@ let secondOperand = null;
 let firstOperator = null;
 let secondOperator = null;
 let result = null;
+let operation = null;
 const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function(e){
@@ -63,8 +64,9 @@ function inputOperand(operand) {
         }
     } else {
         //3rd/5th click - inputs to secondOperand
-        if(displayValue === firstOperand) {
+        if(operation) {
             displayValue = operand;
+            operation = null;
         } else {
             displayValue += operand;
         }
@@ -92,6 +94,7 @@ function inputOperator(operator) {
         //2nd click - handles first operator input
         firstOperator = operator;
         firstOperand = displayValue;
+        operation = 1;
         if (operator == 'sqrt') {
             firstOperator = null;
             displayValue = squareRoot(displayValue);
