@@ -91,6 +91,7 @@ function inputOperator(operator) {
         displayValue = roundAccurately(result, 15).toString();
         firstOperand = displayValue;
         result = null;
+        operation = 1;
     } else if (firstOperator != null && secondOperator != null) {
         //6th click - new secondOperator
         secondOperand = displayValue;
@@ -99,6 +100,7 @@ function inputOperator(operator) {
         displayValue = roundAccurately(result, 15).toString();
         firstOperand = displayValue;
         result = null;
+        operation = 1;
     } else {
         //2nd click - handles first operator input
         firstOperator = operator;
