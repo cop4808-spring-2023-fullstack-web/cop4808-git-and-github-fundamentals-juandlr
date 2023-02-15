@@ -8,6 +8,24 @@ let operation = null;
 const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function (e) {
+    if (e.shiftKey && e.keyCode == 56) {
+        const key = document.querySelector(`button[data-key='88']`);
+        key.click();
+        return false;
+    }
+
+    if (e.shiftKey && e.keyCode == 61) {
+        const key = document.querySelector(`button[data-key='${e.keyCode}']`);
+        key.click();
+        return false;
+    }
+
+    if (e.shiftKey && e.keyCode == 53) {
+        const key = document.querySelector(`button[data-key='80']`);
+        key.click();
+        return false;
+    }
+
     const key = document.querySelector(`button[data-key='${e.keyCode}']`);
     key.click();
 });
