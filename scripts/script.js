@@ -8,6 +8,7 @@ let operation = null;
 const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function (e) {
+    console.log(e.keyCode);
     if (e.shiftKey && e.keyCode == 56) {
         const key = document.querySelector(`button[data-key='88']`);
         key.click();
@@ -27,7 +28,11 @@ window.addEventListener('keydown', function (e) {
     }
 
     const key = document.querySelector(`button[data-key='${e.keyCode}']`);
-    key.click();
+    try {
+        key.click();
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 function updateDisplay() {
